@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Mail,
   Folder,
@@ -33,6 +33,7 @@ export default function App() {
   const categories = [
     "All",
     "Web Application",
+    "React Apps",
     "Desktop Application",
     "Systems & Logic",
   ];
@@ -43,8 +44,8 @@ export default function App() {
       description:
         "An enterprise-grade workforce architecture featuring a dedicated role management component, operational layout structures, and real-time planning matrices.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Prisma"],
-      type: "Web Application",
-      category: "Web Application",
+      type: "React Apps",
+      category: "React Apps",
       image: "/src/assets/workforce.png",
       fallbackText: "Workforce Planning Dashboard & Role Matrix",
       icon: (
@@ -165,7 +166,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0A0D0A] text-gray-100 font-sans selection:bg-[#C5A880] selection:text-black antialiased">
       {/* Dynamic Background Gradients with UX Depth */}
-      <div className="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(circle_at_top_right,rgba(197,168,128,0.04),transparent_50%)] bg-[radial-gradient(circle_at_bottom_left,rgba(34,76,56,0.06),transparent_60%)]" />
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          background:
+            "radial-gradient(circle at top right, rgba(197,168,128,0.04) 0%, transparent 50%), radial-gradient(circle at bottom left, rgba(34,76,56,0.06) 0%, transparent 60%)",
+        }}
+      />
 
       {/* Sticky High-End Glassmorphism Header */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#0A0D0A]/75 border-b border-[#224C38]/20 px-6 py-4 transition-all duration-300">
@@ -175,10 +182,10 @@ export default function App() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <div className="w-8 h-8 rounded border border-[#C5A880]/60 flex items-center justify-center font-serif text-[#C5A880] font-bold text-sm tracking-wider group-hover:border-[#C5A880] group-hover:bg-[#C5A880]/5 transition-all duration-300">
-              IW
+              EW
             </div>
             <span className="font-serif text-sm tracking-widest text-gray-300 group-hover:text-white transition-colors duration-300 uppercase font-medium">
-              Israel W.
+              Esrael W.
             </span>
           </div>
 
@@ -189,7 +196,7 @@ export default function App() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-gray-400 hover:text-[#C5A880] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C5A880] hover:after:w-full after:transition-all after:duration-300"
+                  className="text-gray-400 hover:text-[#C5A880] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#C5A880] hover:after:w-full after:transition-all after:duration-300"
                 >
                   {item}
                 </button>
@@ -259,7 +266,7 @@ export default function App() {
           <div className="pt-4">
             <button
               onClick={() => scrollToSection("projects")}
-              className="px-6 py-3 bg-gradient-to-r from-[#1c3e2e] to-[#122b20] border border-[#C5A880]/30 hover:border-[#C5A880] text-gray-100 text-xs tracking-widest uppercase rounded flex items-center space-x-2 group transition-all duration-300 shadow-lg shadow-black/40 hover:shadow-[#224C38]/20"
+              className="px-6 py-3 bg-linear-to-r from-[#1c3e2e] to-[#122b20] border border-[#C5A880]/30 hover:border-[#C5A880] text-gray-100 text-xs tracking-widest uppercase rounded flex items-center space-x-2 group transition-all duration-300 shadow-lg shadow-black/40 hover:shadow-[#224C38]/20"
             >
               <span>Explore Projects</span>
               <ChevronRight
@@ -278,7 +285,7 @@ export default function App() {
       >
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center tracking-widest font-medium">
+            <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center font-medium">
               <User size={12} className="mr-2" /> Biography
             </h2>
             <h3 className="font-serif text-3xl font-light tracking-tight text-gray-200">
@@ -304,7 +311,7 @@ export default function App() {
       >
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center tracking-widest font-medium">
+            <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center font-medium">
               <Folder size={12} className="mr-2" /> Selected Works
             </h2>
             <h3 className="font-serif text-3xl font-light tracking-tight text-gray-200">
@@ -344,7 +351,7 @@ export default function App() {
               <div>
                 {/* Visual Asset Loader Frame */}
                 <div className="relative w-full h-48 bg-[#070A07] border-b border-[#224C38]/20 overflow-hidden flex items-center justify-center transition-colors duration-300">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center space-y-1.5 bg-gradient-to-b from-[#0A0D0A] to-[#111812] group-hover:to-[#141d15] transition-all duration-300 z-0">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center space-y-1.5 bg-linear-to-b from-[#0A0D0A] to-[#111812] group-hover:to-[#141d15] transition-all duration-300 z-0">
                     <ImageIcon className="w-7 h-7 text-[#C5A880]/30 group-hover:text-[#C5A880]/50 transition-colors" />
                     <span className="text-xs font-mono text-gray-400">
                       {project.fallbackText}
@@ -364,7 +371,7 @@ export default function App() {
                       );
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D120D] via-transparent to-transparent opacity-60 z-20" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0D120D] via-transparent to-transparent opacity-60 z-20" />
                 </div>
 
                 <div className="p-6">
@@ -408,7 +415,7 @@ export default function App() {
       >
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center tracking-widest font-medium">
+            <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center font-medium">
               <Camera size={12} className="mr-2" /> Creative Appendix
             </h2>
             <h3 className="font-serif text-3xl font-light tracking-tight text-gray-200">
@@ -420,9 +427,9 @@ export default function App() {
             {photographyHighlights.map((photo) => (
               <div
                 key={photo.id}
-                className="group relative aspect-[3/2] bg-[#070A07] border border-[#224C38]/30 rounded overflow-hidden flex items-center justify-center p-6 text-center shadow-lg transition-all duration-500 hover:border-[#C5A880]/30"
+                className="group relative aspect-3/2 bg-[#070A07] border border-[#224C38]/30 rounded overflow-hidden flex items-center justify-center p-6 text-center shadow-lg transition-all duration-500 hover:border-[#C5A880]/30"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10 group-hover:via-black/20 transition-all duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent z-10 group-hover:via-black/20 transition-all duration-500" />
 
                 {/* Structural Alignment Box Frame */}
                 <div className="absolute inset-0 flex items-center justify-center border border-dashed border-gray-900 m-3 rounded opacity-40 group-hover:border-gray-800 transition-colors">
@@ -467,7 +474,7 @@ export default function App() {
         className="relative z-10 py-24 px-6 max-w-6xl mx-auto"
       >
         <div className="mb-16 text-center">
-          <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center justify-center tracking-widest font-medium">
+          <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center justify-center font-medium">
             <Layers size={12} className="mr-2" /> Operational Matrix
           </h2>
           <h3 className="font-serif text-3xl font-light tracking-tight text-gray-200">
@@ -537,7 +544,7 @@ export default function App() {
         id="contact"
         className="relative z-10 py-24 px-6 max-w-4xl mx-auto text-center"
       >
-        <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center justify-center tracking-widest font-medium">
+        <h2 className="font-serif text-xs uppercase tracking-widest text-[#C5A880] mb-2 flex items-center justify-center font-medium">
           <BookOpen size={12} className="mr-2" /> Let's Connect
         </h2>
         <h3 className="font-serif text-4xl font-light tracking-tight text-gray-100 mb-6">
@@ -588,10 +595,7 @@ export default function App() {
       </section>
 
       <footer className="relative z-10 border-t border-[#224C38]/15 bg-[#070A07] py-8 text-xs text-gray-600 text-center">
-        <p>
-          © {new Date().getFullYear()} Israel W. Engineered via React,
-          TypeScript & Tailwind v4.
-        </p>
+        <p>© {new Date().getFullYear()} Esrael W.</p>
       </footer>
     </div>
   );
