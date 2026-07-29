@@ -259,9 +259,11 @@ export default function App() {
             .
           </h1>
           <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
-            I am a Software Engineer, Fullstack Developer, and Photographer
-            specializing in structural UI architectures, highly integrated
-            relational databases, and premium digital designs.
+            I am a Software Engineer. Full-Stack Developer. Designer &
+            Photographer. I build high-performance web applications and craft
+            compelling visual experiences. Currently pursuing my Computer
+            Science degree while freelancing globally, I specialize in turning
+            complex ideas into clean code and beautiful design.
           </p>
           <div className="pt-4">
             <button
@@ -293,12 +295,30 @@ export default function App() {
             </h3>
           </div>
           <div className="md:col-span-2 space-y-6 text-gray-400 font-light leading-relaxed text-base md:text-lg">
+            <h3 className="font-serif text-2xl font-light tracking-tight text-[#d5953a] mb-2">
+              About Me
+            </h3>
             <p>
-              Currently accelerating through a Computer Science degree, I split
-              my operational hours between building production web applications
-              as a software freelancer, working within modern stack environments
-              during internships, and composing high-contrast compositions
-              behind a camera lens.
+              Hi, I am a Full-Stack Software Engineer, Designer, and
+              Photographer currently completing my Bachelor of Computer Science
+              (Class of 2027). I’ve always believed that the best digital
+              products require a balance of rigid logic and creative intuition,
+              and I thrive on bridging the gap between robust backend
+              architecture and sleek, intuitive user experiences.
+            </p>
+            <p>
+              As a freelancer, I collaborate with clients to build tailored
+              digital solutions from the ground up. Whether I'm architecting
+              databases in SQL Server, writing clean full-stack code in React,
+              TypeScript, and Node.js, or building desktop systems in C#, I
+              bring a meticulous approach to every line of code. But my work
+              doesn't stop at the terminal. My background as a designer and
+              photographer allows me to view software through a visual lens. I
+              don't just build applications that work; I design experiences that
+              feel premium and look intentional. I am constantly turning complex
+              problems into elegant, functional digital realities—combining
+              high-performance engineering with a polished visual aesthetic.
+              Let’s build something incredible together.
             </p>
           </div>
         </div>
@@ -315,7 +335,7 @@ export default function App() {
               <Folder size={12} className="mr-2" /> Selected Works
             </h2>
             <h3 className="font-serif text-3xl font-light tracking-tight text-gray-200">
-              Engineering Portfolio
+              My Projects
             </h3>
           </div>
 
