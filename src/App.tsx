@@ -18,6 +18,7 @@ import {
   Sun,
   Moon,
 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -851,6 +852,7 @@ export default function App() {
           TypeScript & Tailwind v4.
         </p>
       </footer>
+      <Analytics />
     </div>
   );
 }
