@@ -410,7 +410,7 @@ export default function App() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700 z-10 opacity-70 group-hover:opacity-100"
+                      className="absolute inset-0 w-full h-full object-contain p-2 scale-100 group-hover:scale-105 transition-all duration-700 z-10 opacity-70 group-hover:opacity-100"
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-60 z-20 from-[var(--clr-bg)]" />
