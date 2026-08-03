@@ -226,7 +226,7 @@ export default function App() {
               (item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item)}
+                  onClick={() => scrollToSection(item.toLowerCase())}
                   className="text-[var(--clr-primary)] hover:text-[var(--clr-accent)] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px hover:after:w-full after:transition-all after:duration-300 after:bg-[var(--clr-accent)]"
                 >
                   {item}
@@ -269,7 +269,7 @@ export default function App() {
             (item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item)}
+                onClick={() => scrollToSection(item.toLowerCase())}
                 className="text-left font-serif transition-colors text-[var(--clr-muted)] hover:text-[var(--clr-accent)]"
               >
                 {item}
@@ -396,7 +396,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* Project Two-Column Mobile Grid Configuration */}
+        {/* Project Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           {filteredProjects.map((project, idx) => (
             <div
@@ -505,6 +505,156 @@ export default function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section
+        id="skills"
+        className="relative z-10 py-24 px-6 max-w-6xl mx-auto border-b border-[var(--clr-secondary)]/20"
+      >
+        <div className="text-center mb-16 space-y-2">
+          <div className="inline-flex items-center space-x-2 text-xs font-mono uppercase tracking-[0.2em] text-[var(--clr-accent)] justify-center">
+            <SlidersHorizontal size={12} />
+            <span>Operational Matrix</span>
+          </div>
+          <h2 className="font-serif text-3xl md:text-4xl font-light tracking-tight text-[var(--clr-primary)]">
+            Technical Capability & Tooling
+          </h2>
+        </div>
+
+        {/* 3-Column Tooling Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Column 1: Web & Frontend */}
+          <div className="p-8 border rounded bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20 flex flex-col space-y-4">
+            <div className="w-8 h-8 rounded border flex items-center justify-center border-[var(--clr-accent)]/30 bg-[var(--clr-secondary)]/10 text-[var(--clr-accent)]">
+              <Code size={16} />
+            </div>
+            <h3 className="font-serif text-lg font-normal text-[var(--clr-primary)]">
+              Web & Frontend
+            </h3>
+            <ul className="space-y-2 text-xs font-light text-[var(--clr-muted)]">
+              <li className="flex items-start">
+                <span className="text-[var(--clr-accent)] mr-2 font-mono">
+                  ›
+                </span>
+                <span>React & TypeScript Architecture</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-[var(--clr-accent)] mr-2 font-mono">
+                  ›
+                </span>
+                <span>Tailwind CSS UI Systems</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 2: Backend & Systems */}
+          <div className="p-8 border rounded bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20 flex flex-col space-y-4">
+            <div className="w-8 h-8 rounded border flex items-center justify-center border-[var(--clr-accent)]/30 bg-[var(--clr-secondary)]/10 text-[var(--clr-accent)]">
+              <Briefcase size={16} />
+            </div>
+            <h3 className="font-serif text-lg font-normal text-[var(--clr-primary)]">
+              Backend & Systems
+            </h3>
+            <ul className="space-y-2 text-xs font-light text-[var(--clr-muted)]">
+              <li className="flex items-start">
+                <span className="text-[var(--clr-accent)] mr-2 font-mono">
+                  ›
+                </span>
+                <span>Node.js Platforms & Prisma ORM</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-[var(--clr-accent)] mr-2 font-mono">
+                  ›
+                </span>
+                <span>C# / .NET Game & Client Apps</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Data Architecture */}
+          <div className="p-8 border rounded bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20 flex flex-col space-y-4">
+            <div className="w-8 h-8 rounded border flex items-center justify-center border-[var(--clr-accent)]/30 bg-[var(--clr-secondary)]/10 text-[var(--clr-accent)]">
+              <Calendar size={16} />
+            </div>
+            <h3 className="font-serif text-lg font-normal text-[var(--clr-primary)]">
+              Data Architecture
+            </h3>
+            <ul className="space-y-2 text-xs font-light text-[var(--clr-muted)]">
+              <li className="flex items-start">
+                <span className="text-[var(--clr-accent)] mr-2 font-mono">
+                  ›
+                </span>
+                <span>Microsoft SQL Server Relational Layouts</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-[var(--clr-accent)] mr-2 font-mono">
+                  ›
+                </span>
+                <span>Core Algorithmic Data Mappings</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="relative z-10 py-24 px-6 max-w-6xl mx-auto text-center flex flex-col items-center justify-center"
+      >
+        <div className="space-y-4 max-w-2xl">
+          <div className="inline-flex items-center space-x-2 text-xs font-mono uppercase tracking-[0.2em] text-[var(--clr-accent)]">
+            <Mail size={12} />
+            <span>Let's Connect</span>
+          </div>
+
+          <h2 className="font-serif text-4xl md:text-5xl font-light tracking-tight text-[var(--clr-primary)] mb-8">
+            Initiate a Project Conversation
+          </h2>
+
+          <div className="flex items-center justify-center gap-4 pt-2">
+            <a
+              href="mailto:your.email@example.com"
+              className="px-6 py-3 rounded font-medium text-xs tracking-widest uppercase flex items-center space-x-2 transition-all duration-300 bg-[var(--clr-accent)] text-[var(--clr-bg)] hover:bg-[var(--clr-accent)]/90 shadow-md"
+            >
+              <Mail size={14} />
+              <span>Send Email</span>
+            </a>
+
+            <a
+              href="https://github.com/isra-w"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 rounded border transition-colors duration-300 bg-[var(--clr-bg)] border-[var(--clr-secondary)]/40 hover:border-[var(--clr-accent)]/50 text-[var(--clr-primary)] hover:text-[var(--clr-accent)]"
+              aria-label="GitHub"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 rounded border transition-colors duration-300 bg-[var(--clr-bg)] border-[var(--clr-secondary)]/40 hover:border-[var(--clr-accent)]/50 text-[var(--clr-primary)] hover:text-[var(--clr-accent)]"
+              aria-label="Instagram"
+            >
+              <svg
+                className="w-4 h-4 stroke-current fill-none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
