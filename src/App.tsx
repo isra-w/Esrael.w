@@ -1,3 +1,8 @@
+import workforceImg from "./assets/workforce.png";
+import digitalLibraryImg from "./assets/digital-library.png";
+import bookstoreImg from "./assets/bookstore.png";
+import guessingGameImg from "./assets/guessing-game.png";
+import jjBookShoppingImg from "./assets/jj-book-shopping.jpeg";
 import { useState } from "react";
 import {
   Mail,
@@ -49,7 +54,7 @@ export default function App() {
       tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Prisma"],
       type: "React Apps",
       category: "React Apps",
-      image: "/src/assets/workforce.png",
+      image: workforceImg,
       fallbackText: "Workforce Planning Dashboard & Role Matrix",
       repoLink: "https://github.com/isra-w/workforce_plan",
       icon: (
@@ -66,7 +71,7 @@ export default function App() {
       tags: ["C#", ".NET Architecture", "WinForms", "Database Integration"],
       type: "Desktop Application",
       category: "Desktop Application",
-      image: "/src/assets/digital-library.png",
+      image: digitalLibraryImg,
       fallbackText: "D_LAB Library & Assistant UI",
       repoLink:
         "https://github.com/isra-w/A-C-sharp-digital-library-Mng-t-desktop-app",
@@ -84,7 +89,7 @@ export default function App() {
       tags: ["HTML", "CSS", "PHP", "API Architecture", "Backend Utilities"],
       type: "Fullstack Web App",
       category: "Web Application",
-      image: "/src/assets/bookstore.png",
+      image: bookstoreImg,
       fallbackText: "Book Store Frontend & Backend Architecture",
       repoLink: "https://github.com/isra-w/book-store-web-backend",
       icon: (
@@ -101,7 +106,7 @@ export default function App() {
       tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
       type: "Web Application",
       category: "Web Application",
-      image: "/src/assets/jj-book-shopping.jpeg",
+      image: jjBookShoppingImg,
       fallbackText: "JJ Book Shopping Homepage UI",
       repoLink: "https://github.com/isra-w/jj-book-store-web",
       icon: (
@@ -118,7 +123,7 @@ export default function App() {
       tags: ["React", "TypeScript", "Tailwind CSS"],
       type: "Algorithmic Engine",
       category: "Web Application",
-      image: "/src/assets/calendar.png",
+      image: "", // Provide fallback image or keep structural placeholder if asset missing
       fallbackText: "Dual Calendar System Switcher UI",
       repoLink: "https://github.com/isra-w",
       icon: (
@@ -135,7 +140,7 @@ export default function App() {
       tags: ["C++", "Object-Oriented Programming", "System Logic"],
       type: "Console System",
       category: "Systems & Logic",
-      image: "/src/assets/car-rental.png",
+      image: "",
       fallbackText: "Car Rental Console Interface",
       repoLink: "https://github.com/isra-w/car-rental-system-c-class-project",
       icon: (
@@ -152,7 +157,7 @@ export default function App() {
       tags: ["Java", "Algorithmic Logic", "State Validation"],
       type: "Interactive Logic",
       category: "Systems & Logic",
-      image: "/src/assets/guessing-game.png",
+      image: guessingGameImg,
       fallbackText: "Java Core Interactive Game",
       repoLink: "https://github.com/isra-w/guessing-game",
       icon: (
@@ -198,6 +203,8 @@ export default function App() {
           : "bg-[var(--clr-primary)] text-[var(--clr-bg)]"
       }`}
     >
+      <Analytics />
+
       {/* Dynamic Background Gradients */}
       <div
         className="fixed inset-0 pointer-events-none z-0 transition-opacity duration-500"
@@ -287,7 +294,6 @@ export default function App() {
           </div>
 
           <div className="flex items-center space-x-4 md:hidden">
-            {/* Mobile Theme Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2 rounded-full border transition-all duration-300 ${
@@ -311,7 +317,7 @@ export default function App() {
       {/* Mobile Drawer Menu */}
       {isMenuOpen && (
         <div
-          className={`fixed inset-0 z-40 backdrop-blur-lg flex flex-col justify-center p-8 space-y-6 text-xl uppercase tracking-widest border-b animate-fadeIn ${
+          className={`fixed inset-0 z-40 backdrop-blur-lg flex flex-col justify-center p-8 space-y-6 text-xl uppercase tracking-widest border-b ${
             darkMode
               ? "bg-[var(--clr-bg)]/95 border-[var(--clr-secondary)]/50"
               : "bg-[var(--clr-bg)]/95 border-[var(--clr-secondary)]/20"
@@ -352,7 +358,7 @@ export default function App() {
             }`}
           >
             <span
-              className={`w-1.5 h-1.5 rounded-full  animate-pulse ${darkMode ? "bg-[var(--clr-accent)]" : "bg-[var(--clr-muted)]"}`}
+              className={`w-1.5 h-1.5 rounded-full animate-pulse ${darkMode ? "bg-[var(--clr-accent)]" : "bg-[var(--clr-muted)]"}`}
             />
             <span
               className={`font-mono text-1.5xl tracking-widest ${darkMode ? "text-[var(--clr-primary)]" : "text-[var(--clr-primary)]"}`}
@@ -436,9 +442,7 @@ export default function App() {
             >
               About Me
             </h3>
-            <p
-              className={`text-lg md:text-1xl font-light max-w-2xl leading-relaxed ${darkMode ? "text-[var(--clr-primary)]" : "text-[var(--clr-primary)]"}`}
-            >
+            <p>
               Hi, I am a Fullstack Software Engineer, Designer, and Photographer
               currently completing my Bachelor of Computer Science (Class of
               2027). I’ve always believed that the best digital products require
@@ -446,9 +450,7 @@ export default function App() {
               bridging the gap between robust backend architecture and sleek,
               intuitive user experiences.
             </p>
-            <p
-              className={`text-lg md:text-1xl font-light max-w-2xl leading-relaxed ${darkMode ? "text-[var(--clr-primary)]" : "text-[var(--clr-primary)]"}`}
-            >
+            <p>
               As a freelancer, I collaborate with clients to build tailored
               digital solutions from the ground up. Whether I'm architecting
               databases in SQL Server, writing clean fullstack code in React,
@@ -513,14 +515,14 @@ export default function App() {
         </div>
 
         {/* Project Matrix Grid */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {filteredProjects.map((project, idx) => (
             <div
               key={idx}
               className={`group border rounded overflow-hidden transition-all duration-500 flex flex-col justify-between transform hover:-translate-y-1 hover:shadow-xl ${
                 darkMode
                   ? "bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20 hover:border-[var(--clr-accent)]/35 hover:shadow-[var(--clr-secondary)]/50"
-                  : "bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20/80 hover:border-[var(--clr-secondary)]/35 hover:shadow-[var(--clr-secondary)]/15"
+                  : "bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20 hover:border-[var(--clr-secondary)]/35 hover:shadow-[var(--clr-secondary)]/15"
               }`}
             >
               <div>
@@ -532,17 +534,13 @@ export default function App() {
                       : "bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20"
                   }`}
                 >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 scale-100 group-hover:scale-105 transition-all duration-700 z-10"
-                    onLoad={(e) => {
-                      e.currentTarget.classList.add(
-                        "opacity-70",
-                        "group-hover:opacity-100",
-                      );
-                    }}
-                  />
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700 z-10 opacity-70 group-hover:opacity-100"
+                    />
+                  )}
                   <div
                     className={`absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-60 z-20 ${
                       darkMode
@@ -647,11 +645,11 @@ export default function App() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {photographyHighlights.map((photo) => (
               <div
                 key={photo.id}
-                className={`group relative aspect-3/2 bg-[var(--clr-bg)] border rounded overflow-hidden flex items-center justify-center p-6 text-center shadow-lg transition-all duration-500 ${
+                className={`group relative aspect-[3/2] bg-[var(--clr-bg)] border rounded overflow-hidden flex items-center justify-center p-6 text-center shadow-lg transition-all duration-500 ${
                   darkMode
                     ? "border-[var(--clr-secondary)]/30 hover:border-[var(--clr-accent)]/30"
                     : "border-[var(--clr-secondary)]/20 hover:border-[var(--clr-secondary)]/40"
@@ -670,189 +668,18 @@ export default function App() {
                   <span className="text-[9px] uppercase tracking-widest font-mono text-[var(--clr-accent)] border border-[var(--clr-accent)]/30 px-2 py-0.5 rounded bg-[var(--clr-bg)]/60 shadow-sm">
                     {photo.tag}
                   </span>
-                  <h4 className="font-serif text-base text-[var(--clr-primary)] mt-3 mb-1 font-normal tracking-wide group-hover:text-[var(--clr-primary)] transition-colors">
+                  <h4 className="font-serif text-base text-[var(--clr-primary)] mt-3 mb-1 font-normal tracking-wide transition-colors">
                     {photo.title}
                   </h4>
                   <p className="text-[var(--clr-muted)] text-xs font-light transition-colors">
                     {photo.description}
                   </p>
                 </div>
-
-                <img
-                  src={`/src/assets/photo-${photo.id}.jpg`}
-                  alt={photo.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 scale-100 group-hover:scale-102 transition-all duration-700 z-0"
-                  onLoad={(e) =>
-                    e.currentTarget.classList.add(
-                      "opacity-40",
-                      "group-hover:opacity-65",
-                    )
-                  }
-                />
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Skills Framework Section */}
-      <section
-        id="skills"
-        className="relative z-10 py-24 px-6 max-w-6xl mx-auto"
-      >
-        <div className="mb-16 text-center">
-          <h2
-            className={`font-serif text-xs uppercase tracking-widest mb-2 flex items-center justify-center font-medium ${
-              darkMode
-                ? "text-[var(--clr-accent)]"
-                : "text-[var(--clr-secondary)]"
-            }`}
-          >
-            <Layers size={12} className="mr-2" /> Operational Matrix
-          </h2>
-          <h3
-            className={`font-serif text-3xl font-light tracking-tight ${darkMode ? "text-[var(--clr-primary)]" : "text-[var(--clr-primary)]"}`}
-          >
-            Technical Capability & Tooling
-          </h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Web & Frontend",
-              icon: <Code size={18} />,
-              skills: [
-                "React & TypeScript Architecture",
-                "Tailwind CSS UI Systems",
-              ],
-            },
-            {
-              title: "Backend & Systems",
-              icon: <Briefcase size={18} />,
-              skills: [
-                "Node.js Platforms & Prisma ORM",
-                "C# / .NET Game & Client Apps",
-              ],
-            },
-            {
-              title: "Data Architecture",
-              icon: <Calendar size={18} />,
-              skills: [
-                "Microsoft SQL Server Relational Layouts",
-                "Core Algorithmic Data Mappings",
-              ],
-            },
-          ].map((box, bIdx) => (
-            <div
-              key={bIdx}
-              className={`p-6 rounded border transition-colors duration-300 ${
-                darkMode
-                  ? "bg-[var(--clr-bg)] border-[var(--clr-secondary)]/15 hover:border-[var(--clr-secondary)]/40"
-                  : "bg-[var(--clr-bg)] border-[var(--clr-secondary)]/20 hover:border-[var(--clr-secondary)]/30 shadow-sm"
-              }`}
-            >
-              <div
-                className={`w-10 h-10 rounded border flex items-center justify-center mb-4 ${
-                  darkMode
-                    ? "bg-[var(--clr-secondary)]/20 border-[var(--clr-secondary)]/40 text-[var(--clr-accent)]"
-                    : "bg-[var(--clr-secondary)]/10 border-[var(--clr-secondary)]/30 text-[var(--clr-secondary)]"
-                }`}
-              >
-                {box.icon}
-              </div>
-              <h4
-                className={`font-serif text-lg mb-3 font-normal ${darkMode ? "text-[var(--clr-primary)]" : "text-[var(--clr-primary)]"}`}
-              >
-                {box.title}
-              </h4>
-              <ul
-                className={`space-y-2.5 text-sm font-light ${darkMode ? "text-[var(--clr-muted)]" : "text-[var(--clr-mutedalt)]"}`}
-              >
-                {box.skills.map((skill, sIdx) => (
-                  <li key={sIdx} className="flex items-center">
-                    <ChevronRight
-                      size={12}
-                      className={`mr-2 ${darkMode ? "text-[var(--clr-accent)]/70" : "text-[var(--clr-secondary)]"}`}
-                    />{" "}
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section
-        id="contact"
-        className="relative z-10 py-24 px-6 max-w-4xl mx-auto text-center"
-      >
-        <h2
-          className={`font-serif text-xs uppercase tracking-widest mb-2 flex items-center justify-center font-medium ${
-            darkMode
-              ? "text-[var(--clr-accent)]"
-              : "text-[var(--clr-secondary)]"
-          }`}
-        >
-          <BookOpen size={12} className="mr-2" /> Let's Connect
-        </h2>
-        <h3
-          className={`font-serif text-4xl font-light tracking-tight mb-6 ${darkMode ? "text-[var(--clr-primary)]" : "text-[var(--clr-primary)]"}`}
-        >
-          Initiate a Project Conversation
-        </h3>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <a
-            href="mailto:isra.w@example.com"
-            className="w-full sm:w-auto px-8 py-3.5 bg-[var(--clr-accent)] hover:bg-[var(--clr-accent)] text-[var(--clr-bg)] font-semibold tracking-widest uppercase text-xs rounded flex items-center justify-center space-x-2 transition-all duration-300 transform active:scale-98 shadow-md hover:shadow-[var(--clr-accent)]/10"
-          >
-            <Mail size={14} />
-            <span>Send Email</span>
-          </a>
-          <div className="flex items-center space-x-4">
-            <a
-              href="https://github.com/isra-w"
-              target="_blank"
-              rel="noreferrer"
-              className="p-3 border border-[var(--clr-secondary)]/40 hover:border-[var(--clr-accent)]/50 rounded text-[var(--clr-primary)] hover:text-[var(--clr-accent)] bg-[var(--clr-overlay)]/40 transition-all duration-300"
-            >
-              <svg
-                className="w-4 h-4 stroke-current"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeWidth="2"
-              >
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/israel.w_/"
-              target="_blank"
-              rel="noreferrer"
-              className="p-3 border border-[var(--clr-secondary)]/40 hover:border-[var(--clr-accent)]/50 rounded text-[var(--clr-muted)] hover:text-[var(--clr-accent)] bg-[var(--clr-overlay)]/40 transition-all duration-300"
-            >
-              <svg
-                className="w-4 h-4 stroke-current"
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeWidth="2"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <footer className="relative z-10 border-t border-[var(--clr-secondary)]/15 bg-[var(--clr-bg)] py-8 text-xs text-[var(--clr-mutedalt)] text-center">
-        <p>
-          © {new Date().getFullYear()} Israel W. Engineered via React,
-          TypeScript & Tailwind v4.
-        </p>
-      </footer>
-      <Analytics />
     </div>
   );
 }
