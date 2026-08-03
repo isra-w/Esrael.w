@@ -289,9 +289,9 @@ export default function App() {
             </span>
           </div>
           <h1 className="font-serif text-5xl md:text-7xl font-light tracking-tight leading-none text-[var(--clr-primary)]">
-            Architecting clean web frameworks &{" "}
+            Full-Stack Developer &{" "}
             <span className="italic font-normal text-[var(--clr-accent)]">
-              visual narratives
+              Software Engineer
             </span>
             .
           </h1>
