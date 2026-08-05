@@ -615,13 +615,26 @@ export default function App() {
             Initiate a Project Conversation
           </h2>
 
-          <div className="flex items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <a
               href="mailto:your.email@example.com"
               className="px-6 py-3 rounded font-medium text-xs tracking-widest uppercase flex items-center space-x-2 transition-all duration-300 bg-[var(--clr-accent)] text-[var(--clr-bg)] hover:bg-[var(--clr-accent)]/90 shadow-md"
             >
               <Mail size={14} />
               <span>Send Email</span>
+            </a>
+
+            <a
+              href="https://www.upwork.com/freelancers/~016a980be28ea3f8b0?mp_source=share"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 rounded border transition-colors duration-300 bg-[var(--clr-bg)] border-[var(--clr-secondary)]/40 hover:border-[var(--clr-accent)]/50 text-[var(--clr-primary)] hover:text-[var(--clr-accent)] flex items-center justify-center"
+              aria-label="Upwork Profile"
+              title="Upwork Profile"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.396-2.182 1.484-3.176 2.838-3.176 1.092 0 1.988.808 1.988 2.215.001 1.825-1.085 3.306-1.98 3.306zm0-7.838c-2.822 0-4.88 2.008-5.596 4.401-1.222-1.782-2.131-4.221-2.512-6.173H7.575v8.528c0 1.548-.826 2.709-2.101 2.709-1.277 0-2.101-1.161-2.101-2.709V3.548H.497v8.528c0 3.272 2.116 5.688 5.011 5.688 2.896 0 4.981-2.416 4.981-5.688v-1.61c.421 1.884 1.341 3.882 2.502 5.385l-1.583 7.561h2.952l1.093-5.218c.954.67 2.052 1.053 3.108 1.053 3.011 0 5.039-2.503 5.039-5.918 0-3.416-2.028-5.918-5.039-5.918z" />
+              </svg>
             </a>
 
             <a
