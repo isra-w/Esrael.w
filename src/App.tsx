@@ -20,6 +20,7 @@ import {
   Camera,
   Compass,
   SlidersHorizontal,
+  Send,
 } from "lucide-react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -622,6 +623,17 @@ export default function App() {
             >
               <Mail size={14} />
               <span>Send Email</span>
+            </a>
+
+            <a
+              href="https://t.me/Iesra_w"
+              target="_blank"
+              rel="noreferrer"
+              className="p-3 rounded border transition-colors duration-300 bg-[var(--clr-bg)] border-[var(--clr-secondary)]/40 hover:border-[var(--clr-accent)]/50 text-[var(--clr-primary)] hover:text-[var(--clr-accent)] flex items-center justify-center"
+              aria-label="Telegram"
+              title="Telegram"
+            >
+              <Send className="w-4 h-4" />
             </a>
 
             <a
