@@ -622,10 +622,10 @@ export default function App() {
             Initiate a Project Conversation
           </h2>
 
-          <div className="flex items-center justify-center gap-3 pt-2">
+          <div className="flex items-center justify-center gap-2 pt-2">
             <a
               href="mailto:your.email@example.com"
-              className="flex flex-col items-center gap-2 rounded border border-[var(--clr-accent)] bg-[var(--clr-accent)] px-3 py-2 text-[var(--clr-bg)] shadow-md transition-all duration-300 hover:bg-[var(--clr-accent)]/90"
+              className="flex flex-col items-center gap-1 rounded border border-[var(--clr-accent)] bg-[var(--clr-accent)] px-3 py-2 text-[var(--clr-bg)] shadow-md transition-all duration-300 hover:bg-[var(--clr-accent)]/90"
             >
               <Mail size={20} />
               <span className="hidden sm:block whitespace-nowrap font-mono text-[10px] font-semibold uppercase tracking-widest">
